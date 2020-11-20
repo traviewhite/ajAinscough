@@ -1,0 +1,242 @@
+$primaryYellow: #FFE141;
+$Navy: #0F3C5B;
+$NavyLt: #405773;
+$Red: #FB9271;
+$Cyan: #76EEEF;
+$YellowDk: #D8BF39;
+$secondary2Color: #6AA386;
+$secondary3Color: #AAA348;
+$shadow:  rgba(100, 10, 10, 0.2);
+$highlightColor: #DBFFEB;
+
+$fontStackSans: 'Fira Sans', sans-serif;
+$fontStackCode: 'Fira Code', monospace;
+$fontStackOswald: 'Oswald', sans-serif;
+$fontStackRoboCond: 'Roboto Condensed', sans-serif;
+$fontStackRoboMono: 'Roboto Mono', monospace;
+
+@import "./include-media";
+@import "./type";
+@import "./nav";
+// @import "./filter";
+// @import "./home";
+// @import "./about";
+//@import "./design";
+//@import "./illustration";
+//@import "./showcasePages";
+//@import "./gallery";
+
+.container {
+  min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include media("<desktop") {
+      flex-direction: column;
+    }
+  }
+  .footerC {
+    padding: 0 0 1em;
+    text-align: center;
+    p {
+      font-size: 0.8em;
+      color: rgba(251,146,113,0.6);
+    }
+  }
+}
+
+.sidebar {
+  max-width: 260px;
+  width: 100%;
+  height: 100vh;
+  padding: 1.5em;
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5;
+  @include media("<desktopLg") {
+    max-width: 240px;
+  }
+  @include media("<desktop") {
+    max-width: 100%;
+    width: 100%;
+    height: 8vh;
+    padding: 1em 0 0 1em;
+    flex-direction: row;
+    align-items: center;
+  }
+  .sidebar_title {
+    margin: 0 0 1em;
+    z-index: 999;
+    h1 {
+      letter-spacing: 0;
+      font-family: $fontStackRoboCond;
+      color: $NavyLt;
+    }
+    h6 {
+      font-family: $fontStackRoboMono;
+      margin-top: 2px;
+      opacity: 0.8;
+      color: $NavyLt
+    }
+  }
+  .sidebar_social {
+    margin: 1em 0;
+    @include media("<desktop") {
+      display: none;
+    }
+    h5 {
+      color: $NavyLt;
+      font-size: 0.8em;
+      margin: 0 0 0.5em;
+    }
+    h2 {
+      color: $NavyLt;
+      font-size: 1.2em;
+    }
+  }
+  footer {
+    font-size: 0.5em;
+    margin: 1em 0 0;
+    @include media("<desktop") {
+      display: none;
+    }
+  }
+}
+
+.gallery_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2em 0 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+  @include media("<desktop") {
+    height: 92vh;
+    align-items: flex-start;
+  }
+  @include media("<tablet") {
+    flex-direction: column;
+    overflow-x: hidden;
+    height: auto;
+  }
+  .thumbnail {
+    width: auto;
+    height: auto;
+    @include media("<tablet") {
+      padding: 0 1em;
+      width: 100%;
+    }
+    img {
+      border-radius: 2px;
+      box-shadow: 6px 6px $shadow;
+      background-color: $Red;
+      object-fit: cover;
+      width: auto;
+      height: 70vh;
+      margin: 0 1.5em;
+      @include media("<desktop") {
+        height: 65vh;
+      }
+      @include media("<tablet") {
+        width: 100%;
+        height: auto;
+        margin: 1em auto;
+      }
+    }
+    .gallery_info {
+      margin: 1em 2em;
+      @include media("<tablet") {
+        margin: 0.5em 0.5em 2em;
+      }
+      h2 {
+        font-family: $fontStackRoboCond;
+        font-size: 1.8em;
+        letter-spacing: 2px;
+        color: #73443F;
+      }
+      p {
+        margin-top: 4px;
+        font-size: 0.7em;
+        font-family: $fontStackRoboMono;
+        color: lightslategray;
+      }
+      h5 {
+        font-family: $fontStackRoboMono;
+        font-size: 0.9em;
+        color: lightslategrey;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+
+.mobile_nav {
+  display: none;
+  @include media("<desktop") {
+    display: block;
+  }
+}
+
+
+
+
+
+
+.no-scroll {
+  overflow: hidden;
+}
+
+//scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+/* track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+/* handle */
+::-webkit-scrollbar-thumb {
+  background: #605449;
+  border-radius: 2px;
+}
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: brown;
+}
+
+
+
+// Social Icons 
+.social_links {
+  margin: 0.6em auto 0;
+  color: $NavyLt;
+  font-size: 2em;
+  a {
+    :nth-child(n) {
+      margin: 0 10px;
+      cursor: pointer;
+      transition: ease 0.05s;
+      &:hover {
+        color: $primaryYellow;
+        transform: translateX(-1px) translateY(-1px);
+      }
+    }
+  }
+}
