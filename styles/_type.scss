@@ -21,7 +21,6 @@ h1 {
 }
 h2 {
   color: $Navy;
-  font-family: $fontStackSans;
   font-weight: bold;
   font-style: normal;
   font-size: 3em;
@@ -98,19 +97,19 @@ h6 {
   font-family: $fontStackCode;
   font-weight: 500;
   font-style: normal;
-  font-size: 1em;
-  letter-spacing: 3px;
+  font-size: 0.8em;
+  letter-spacing: 2px;
   @include media("<desktopLg") {
-    font-size: 0.9em;
-  }
-  @include media("<desktop") {
-    font-size: 0.8em;
-  }
-  @include media("<tablet") {
     font-size: 0.7em;
   }
-  @include media("<=phone") {
+  @include media("<desktop") {
+    font-size: 0.7em;
+  }
+  @include media("<tablet") {
     font-size: 0.6em;
+  }
+  @include media("<=phone") {
+    font-size: 0.5em;
   }
 }
 p {

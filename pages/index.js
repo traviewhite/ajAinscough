@@ -11,11 +11,11 @@ export const galleryData = [
     id: 0-1,
     img: "https://source.unsplash.com/random", 
     alt: "i",
-    title: "TITLE",
-    description: "description",
-    year: "year",
-    dimensions: "dimensions",
-    medium: "medium",
+    title: "SNOOP GARDEN",
+    description: "Wallet chains smarter child keds des’ree. Snoop dogg savage garden new kids on the block toyota supra yin yang ghost pottery scene.",
+    year: "2020",
+    dimensions: "18 x 24",
+    medium: "Oil on Canvas",
     link: "/"
   },
   {
@@ -126,7 +126,7 @@ export default function Home() {
           <nav>
             <Links />
           </nav>
-          
+
           <div className="sidebar_social">
             <h5>instagram</h5>
             <h2>@ajainscoughstudio</h2>

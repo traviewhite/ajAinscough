@@ -14,6 +14,7 @@ $fontStackCode: 'Fira Code', monospace;
 $fontStackOswald: 'Oswald', sans-serif;
 $fontStackRoboCond: 'Roboto Condensed', sans-serif;
 $fontStackRoboMono: 'Roboto Mono', monospace;
+$fontStackAnton: 'Anton', sans-serif;
 
 @import "./include-media";
 @import "./type";
@@ -59,7 +60,7 @@ $fontStackRoboMono: 'Roboto Mono', monospace;
   width: 100%;
   height: 100vh;
   padding: 1.5em;
-  background-color: #e8e8e8;
+  background-color: rgba(240, 240, 240, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -75,19 +76,23 @@ $fontStackRoboMono: 'Roboto Mono', monospace;
     flex-direction: row;
     align-items: center;
   }
+  @include media("<tablet") {
+    height: 80px;
+  }
   .sidebar_title {
     margin: 0 0 1em;
     z-index: 999;
     h1 {
-      letter-spacing: 0;
+      letter-spacing: 0px;
+      font-weight: 700;
       font-family: $fontStackRoboCond;
-      color: $NavyLt;
+      color: black;
     }
     h6 {
       font-family: $fontStackRoboMono;
-      margin-top: 2px;
-      opacity: 0.8;
-      color: $NavyLt
+      margin-top: 0px;
+      opacity: 0.6;
+      color: black;
     }
   }
   .sidebar_social {
@@ -142,7 +147,7 @@ $fontStackRoboMono: 'Roboto Mono', monospace;
     }
     img {
       border-radius: 2px;
-      box-shadow: 6px 6px $shadow;
+      box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.2);
       background-color: $Red;
       object-fit: cover;
       width: auto;
@@ -158,26 +163,29 @@ $fontStackRoboMono: 'Roboto Mono', monospace;
       }
     }
     .gallery_info {
-      margin: 1em 2em;
+      margin: 1.25em 2em;
       @include media("<tablet") {
-        margin: 0.5em 0.5em 2em;
+        margin: 0.2em 0.5em 2em;
       }
       h2 {
         font-family: $fontStackRoboCond;
-        font-size: 1.8em;
-        letter-spacing: 2px;
-        color: #73443F;
+        font-size: 1.5em;
+        letter-spacing: 0px;
+        color: rgba(0, 0, 0, 0.8);
       }
       p {
-        margin-top: 4px;
+        margin: 6px 0 0 1px;
         font-size: 0.7em;
         font-family: $fontStackRoboMono;
-        color: lightslategray;
+        font-weight: 400;
+        color: dimgrey;
       }
       h5 {
         font-family: $fontStackRoboMono;
-        font-size: 0.9em;
-        color: lightslategrey;
+        font-weight: 600;
+        font-size: 0.75em;
+        letter-spacing: 0px;
+        color: rgba(0, 0, 0, 0.7);
         margin-bottom: 5px;
       }
     }

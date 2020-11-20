@@ -24,23 +24,26 @@ nav {
     justify-content: space-around;
     @include media("<desktop") {
       margin: 5em 1em 0;
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-start;
       overflow: hidden;
     }
     ul {
-      margin: 1em 0;
+      margin: 2em 0;
       width: 100%;
       display: flex;
       flex-direction: column;
       @include media("<desktop") {
-        flex-wrap: nowrap;
-        flex-direction: column;
-        width: 50%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
       }
       h5 {
         font-size: 0.8em;
-        margin-bottom: 5px;
+        // margin-bottom: 5px;
+        @include media("<desktop") {
+          margin: 0 1em 0 0;
+        }
       }
       li {
         display: inline;
@@ -65,8 +68,8 @@ nav {
   // NavToggle Component
   button {
     position: absolute;
-    top: 24px;
-    right: 22px;
+    top: 25px;
+    right: 20px;
     outline: none;
     border: none;
     -webkit-user-select: none;
