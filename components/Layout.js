@@ -7,7 +7,7 @@ const Layout = ({ children })  => {
     <div className="container">
       <Head />
       {children}
-      {/* <div className="footerC"><p>©2020 traviewhite.com | TRAVIS WHITE</p></div> */}
+      {/* <div className="footerC"><p>©2020 site.com | NAME</p></div> */}
     </div>
   )
 }

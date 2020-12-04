@@ -1,63 +1,109 @@
-// main nav menu
-nav {
-  margin: 1em 0;
-  padding: 0;
-  height: 100%;
+// // main nav menu
+.navigation {
   width: 100%;
-  font-weight: bold;
-  color: $NavyLt;
-  z-index: 998;
-  transition: ease 0.2s;
-  &:hover {
+  height: auto;
+  padding: 1.5rem 0.5rem;
+  background-color: rgba(240, 240, 240, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  // @include media("<desktopLg") {
+  //   max-width: 240px;
+  // }
+  // @include media("<desktop") {
+  //   max-width: 100%;
+  //   width: 100%;
+  //   height: 8vh;
+  //   padding: 1em 0 0 1em;
+  //   flex-direction: row;
+  //   align-items: center;
+  // }
+  // @include media("<tablet") {
+  //   height: 80px;
+  // }
+  .nav_title {
+    // flex: 1;
+    margin: 0;
+    h1 {
+      letter-spacing: 0px;
+      font-weight: 100;
+      font-family: $fontStackAnton;
+      color: slategrey;
+    }
+    h6 {
+      font-family: $fontStackRoboCond;
+      margin-top: 0px;
+      opacity: 0.7;
+      color: black;
+      font-size: 14px;
+      font-weight: 100;
+    }
   }
-  @include media("<desktop") {
-    width: auto;
-    display: none;
+  .desktop_nav {
+    display: block;
+    @include media("<desktop") {
+      display: none;
+    }
+
+    
   }
   .nav_menu {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    // height: 100%;
+    // width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     @include media("<desktop") {
-      margin: 5em 1em 0;
-      flex-direction: column;
-      justify-content: flex-start;
-      overflow: hidden;
+      // margin: 5em 1em 0;
+      // flex-direction: column;
+      // justify-content: flex-start;
+      // overflow: hidden;
+    }
+    p {
+      padding-top: 1px;
+      margin: 0 1.5rem;
+      font-weight: 100;
+      opacity: 0.25;
+      font-family: $fontStackCode;
+      // font-family: $fontStackSans;
+      line-height: 2;
     }
     ul {
-      margin: 2em 0;
-      width: 100%;
+      // margin: 0 0 0 2rem;
+      // width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       @include media("<desktop") {
-        flex-wrap: wrap;
-        flex-direction: row;
-        width: 100%;
+        // flex-wrap: wrap;
+        // flex-direction: row;
+        // width: 100%;
       }
       h5 {
-        font-size: 0.8em;
+        // font-size: 0.8em;
         // margin-bottom: 5px;
         @include media("<desktop") {
-          margin: 0 1em 0 0;
+          // margin: 0 1em 0 0;
         }
       }
       li {
         display: inline;
-        margin: 0.2em 0;
-        padding: 2px 5px;
+        // margin: 0 0.5rem;
+        padding: 5px 10px;
         color: $NavyLt;
-        font-family: $fontStackCode;
-        font-size: 1em;
-        font-weight: 500;
-        // letter-spacing: -1px;
+        font-family: $fontStackSans;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0px;
         cursor: pointer;
         transition: 0.2s ease-out;
         &:hover {
-          background-color: $Red;
+          // background-color: $Red;
+          text-decoration: underline;
         }
         @include media("<desktop") {
           display: block;
@@ -67,9 +113,9 @@ nav {
   }
   // NavToggle Component
   button {
-    position: absolute;
-    top: 25px;
-    right: 20px;
+    position: relative;
+    // top: 25px;
+    // right: 20px;
     outline: none;
     border: none;
     -webkit-user-select: none;
@@ -81,9 +127,34 @@ nav {
     z-index: 999;
     cursor: pointer;
   }
+  // .sidebar_social {
+  //   margin: 1em 0;
+  //   @include media("<desktop") {
+  //     display: none;
+  //   }
+  //   h5 {
+  //     color: $NavyLt;
+  //     font-size: 0.8em;
+  //     margin: 0 0 0.5em;
+  //   }
+  //   h2 {
+  //     color: $NavyLt;
+  //     font-size: 1.2em;
+  //   }
+  // }
+  // footer {
+  //   font-size: 0.5em;
+  //   margin: 1em 0 0;
+  //   @include media("<desktop") {
+  //     display: none;
+  //   }
+  // }
 }
 
-// default list styling
-li {
-  list-style: none;
+
+.mobile_nav {
+  display: none;
+  @include media("<desktop") {
+    display: block;
+  }
 }

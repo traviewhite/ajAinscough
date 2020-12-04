@@ -30,7 +30,12 @@ const variants = {
 const Links = () => (
   <motion.div className="nav_menu">
     <motion.ul variants={ ulvariants }>
-      <h5>YEAR :</h5>
+      <Link href="/code">
+        <motion.li variants={variants}>
+          <a>ALL</a>
+        </motion.li>
+      </Link>
+
       <Link href="/code">
         <motion.li variants={variants}>
           <a>2020</a>
@@ -43,39 +48,21 @@ const Links = () => (
         </motion.li>
       </Link>
       
-      <Link href="/fine-art">
+      {/* <Link href="/fine-art">
         <motion.li variants={variants}>
           <a>2018</a>
         </motion.li>
-      </Link>
-
-      <Link href="/photo">
-        <motion.li variants={variants}>
-          <a>2017</a>
-        </motion.li>
-      </Link>
-
-      <Link href="/about">
-        <motion.li variants={variants}>
-          <a>2016</a>
-        </motion.li>
-      </Link>
-
-      <Link href="/about">
-        <motion.li variants={variants}>
-          <a>2015-0000</a>
-        </motion.li>
-      </Link>
+      </Link> */}
     </motion.ul>
 
+    <p>|</p>
     
     <motion.ul variants={ ulvariants }>
-      <h5>MENU :</h5>
-      <Link href="/code">
+      {/* <Link href="/code">
         <motion.li variants={variants}>
           <a>Shows</a>
         </motion.li>
-      </Link>
+      </Link> */}
 
       <Link href="/design">
         <motion.li variants={variants}>
