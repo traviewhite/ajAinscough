@@ -126,7 +126,7 @@ li {
     background-color: lightgrey;
     z-index: 9999;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     cursor: pointer;
@@ -142,7 +142,7 @@ li {
       // background: -webkit-linear-gradient(pink, blanchedalmond);
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
-      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+      // text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
       @include media("<desktop") {
         font-size: 6rem;
       }
