@@ -17,7 +17,7 @@ export default function Home({ post }) {
 
   return (
     <>
-      {/* <Enter /> */}
+      <Enter />
       <Layout>
         <Head>
           <title>Aj Ainscough Studio</title>
