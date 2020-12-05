@@ -7,14 +7,15 @@ const menuBtn = {
     height: '100vh',
     // backgroundColor: 'black',
     // zIndex: 99999,
-    // overflow: 'hidden',
-    position: 'absolute',
+    overflow: 'hidden',
+    position: 'fixed',
     top: '0',
     right: '0',
     bottom: '0',
     left: '0',
     x: '0%',
     y: '0%',
+    zIndex: 9999,
     transition: {
       width: {tween: 100, delay: 3, duration: 0.25, ease: 'easeIn'},
       height: {tween: 100, delay: 3, duration: 0.25, ease: 'easeIn'}      
@@ -36,7 +37,7 @@ const menuBtn = {
     // zIndex: -999,
     transition: {
       width: {tween: 500, delay: 0.1, duration: 0.8, ease: 'easeIn'},
-      height: {tween: 500, delay: 0.1, duration: 0.8, ease: 'easeIn'}
+      height: {tween: 100, delay: 0.01, duration: 0.7, ease: 'easeOut'}
     }
   }
 }
