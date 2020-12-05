@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useCycle, useSpring } from 'framer-motion'
-import NavToggle from '../components/NavToggle'
-import Links from '../components/Links'
+import Link from 'next/link'
+import NavToggle from 'components/NavToggle'
+import Links from 'components/Links'
 
 const menuBtn = {
   open: {
@@ -15,7 +16,7 @@ const menuVariants = {
   open: {
     opacity: 1,
     width: '100%',
-    height: '350px',
+    height: '300px',
     display: 'block',
     position: 'fixed',
     // top: 0,
@@ -82,8 +83,8 @@ const backDim = {
     zIndex: -10,
     transition: {
       opacity: {tween: 200, delay: 0, duration: 0.75, ease: 'easeOut'},
-      display: {tween: 400, delay: 5, duration: 1, ease: 'easeOut'},
-      zIndex: {tween: 400, delay: 5, duration: 0.4, ease: 'easeOut'}
+      display: {tween: 400, delay: 0.5, duration: 0.5, ease: 'easeOut'},
+      zIndex: {tween: 400, delay: 0.5, duration: 0.5, ease: 'easeOut'}
     }
   }
 }
@@ -111,7 +112,13 @@ const Nav = () => {
   const [isOpen, toggleOpen] = useCycle(false, true)
 
   return (
-    <>
+    <header className="navigation">
+      <Link href="/">
+      <div className="nav_title">
+        <a><h1>AJ AINSCOUGH</h1></a>
+        {/* <h6>fine artist</h6> */}
+      </div>
+      </Link>
       <div className="desktop_nav">
         <Links />
       </div>
@@ -126,7 +133,7 @@ const Nav = () => {
         //toggle={() => { toggleOpen() }}
       >
         <NavToggle />
-        <motion.div className="shit" variants={ menuVariants }>
+        <motion.div variants={ menuVariants }>
           <Links />
         </motion.div>
       </motion.nav>
@@ -136,7 +143,16 @@ const Nav = () => {
         variants={ backDim }
         onClick={() => { toggleOpen() }}
       />
-    </>
+        
+
+      {/* <div className="sidebar_social">
+        <h5>instagram</h5>
+        <h2>@ajainscoughstudio</h2>
+      </div> */}
+      {/* <footer>
+        c2020 AJ Ainscough
+      </footer> */}
+    </header>    
   )
 }
 

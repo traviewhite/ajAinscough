@@ -1,13 +1,21 @@
 import Head from '../components/Head'
-//import Navbar from '../components/Navbar'
-//import Footer from '../components/Footer'
+import Nav from 'components/Nav'
+import Link from 'next/link'
 
 const Layout = ({ children })  => {
   return (
     <div className="container">
       <Head />
+      <Nav />
       {children}
-      {/* <div className="footerC"><p>©2020 site.com | NAME</p></div> */}
+      <footer>
+        <p>©2020 ajainscough.studio | Aj Ainscough /</p>
+        <p><Link href="https://traviewhite.com/">
+          <a target="_blank">
+            / DESIGNED & DEVELOPED | TRAVIS WHITE
+          </a>
+        </Link></p>
+      </footer>
     </div>
   )
 }

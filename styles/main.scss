@@ -40,6 +40,7 @@ $fontStackAnton: 'Anton', sans-serif;
     padding: 0 0.5rem;
     width: 100%;
     height: 100%;
+    flex: 1;
     // display: flex;
     // flex-direction: column;
     // justify-content: space-between;
@@ -48,141 +49,37 @@ $fontStackAnton: 'Anton', sans-serif;
       flex-direction: column;
     }
   }
-  .footerC {
-    padding: 0 0 1em;
+  footer {
+    margin: 0 0 1rem;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     p {
-      font-size: 0.8em;
-      color: rgba(251,146,113,0.6);
-    }
-  }
-}
-
-
-
-.test_box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 1em;
-  .thumbnail {
-    width: auto;
-    height: auto;
-    // @include media("<tablet") {
-    //   padding: 0 1em;
-    //   width: 100%;
-    // }
-    img {
-      border-radius: 2px;
-      box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.2);
-      background-color: $Red;
-      object-fit: cover;
-      width: 300px;
-      height: auto;
-      margin: 0;
-      // @include media("<desktop") {
-      //   height: 65vh;
-      // }
-      // @include media("<tablet") {
-      //   width: 100%;
-      //   height: auto;
-      //   margin: 1em auto;
-      // }
-    }
-  }
-}
-
-.gallery_wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  // align-items: center;
-  justify-content: space-between;
-  padding: 1em;
-  max-width: 100%;
-  width: 100%;
-  // height: 100vh;
-  // overflow-x: scroll;
-  // @include media("<desktop") {
-  //   height: 92vh;
-  //   align-items: flex-start;
-  // }
-  // @include media("<tablet") {
-  //   flex-direction: column;
-  //   overflow-x: hidden;
-  //   height: auto;
-  // }
-  .thumbnail {
-    width: auto;
-    height: auto;
-    // @include media("<tablet") {
-    //   padding: 0 1em;
-    //   width: 100%;
-    // }
-    img {
-      border-radius: 2px;
-      box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.2);
-      background-color: $Red;
-      object-fit: cover;
-      width: 300px;
-      height: auto;
-      margin: 0;
-      // @include media("<desktop") {
-      //   height: 65vh;
-      // }
-      // @include media("<tablet") {
-      //   width: 100%;
-      //   height: auto;
-      //   margin: 1em auto;
-      // }
-    }
-    .gallery_info {
-      width: 300px;
-      margin: 1em 0.5em 2em;
-      // @include media("<tablet") {
-      //   margin: 0.2em 0.5em 2em;
-      // }
-      h2 {
-        font-family: $fontStackRoboCond;
-        font-size: 1.5em;
-        letter-spacing: 0px;
-        color: rgba(0, 0, 0, 0.8);
-      }
-      p {
-        margin: 6px 0 0 1px;
-        font-size: 0.7em;
-        font-family: $fontStackRoboMono;
-        font-weight: 400;
-        color: dimgrey;
-      }
-      h5 {
-        font-family: $fontStackRoboMono;
-        font-weight: 600;
-        font-size: 0.75em;
-        letter-spacing: 0px;
-        color: rgba(0, 0, 0, 0.7);
-        margin-bottom: 5px;
+      margin: 0.25rem 0 0;
+      font-size: 0.7rem;
+      letter-spacing: -0.5px;
+      color: rgba(0,0,0,0.25);
+      :nth-child(n) {
+        color: rgba(250,150,50,0.4);
+        transition: ease 0.25s;
+        &:hover {
+          color: rgba(250,200,100,1);
+          transform: translateX(-1px) translateY(-1px);
+        }
       }
     }
   }
 }
-
-
-
 
 // default list styling
 li {
   list-style: none;
 }
-
-
-
-
 .no-scroll {
   overflow: hidden;
 }
-
 //scrollbar
 /* width */
 ::-webkit-scrollbar {
@@ -203,8 +100,6 @@ li {
   background: brown;
 }
 
-
-
 // Social Icons 
 .social_links {
   margin: 0.6em auto 0;
@@ -223,31 +118,40 @@ li {
   }
 }
 
-
-
-.enter_screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightgrey;
-  z-index: 9999;
-  overflow: hidden;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  cursor: pointer;
-  background-image: url('../public/home.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  h1 {
-    font-family: $fontStackAnton;
-    font-size: 10em;
-    letter-spacing: -0.5px;
-    color: white;
-    // background: -webkit-linear-gradient(pink, blanchedalmond);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+.heading {
+  .enter_screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    z-index: 9999;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-image: url('../public/home.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      font-family: $fontStackAnton;
+      font-size: 10rem;
+      letter-spacing: -0.5px;
+      color: white;
+      // background: -webkit-linear-gradient(pink, blanchedalmond);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+      @include media("<desktop") {
+        font-size: 8rem;
+      }
+      @include media("<tablet") {
+        font-size: 6rem;
+      }
+      @include media("<phone") {
+        font-size: 4rem;
+      }
+    }
   }
 }

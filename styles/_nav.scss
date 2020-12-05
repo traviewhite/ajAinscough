@@ -2,7 +2,7 @@
 .navigation {
   width: 100%;
   height: auto;
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 1rem;
   background-color: rgba(240, 240, 240, 0);
   display: flex;
   flex-direction: row;
@@ -31,6 +31,12 @@
       font-weight: 100;
       font-family: $fontStackAnton;
       color: slategrey;
+      cursor: pointer;
+      transition: ease 0.25s;
+      &:hover {
+        color: turquoise;
+        transform: translateX(0px) translateY(-1px);
+      }
     }
     h6 {
       font-family: $fontStackRoboCond;
@@ -43,11 +49,15 @@
   }
   .desktop_nav {
     display: block;
-    @include media("<desktop") {
+    @include media("<tablet") {
       display: none;
     }
-
-    
+  }
+  .mobile_nav {
+    display: none;
+    @include media("<tablet") {
+      display: block;
+    }
   }
   .nav_menu {
     margin: 0;
@@ -58,11 +68,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    @include media("<desktop") {
-      // margin: 5em 1em 0;
-      // flex-direction: column;
-      // justify-content: flex-start;
-      // overflow: hidden;
+    @include media("<tablet") {
+      margin: 5rem 0 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow: hidden;
     }
     p {
       padding-top: 1px;
@@ -72,6 +82,19 @@
       font-family: $fontStackCode;
       // font-family: $fontStackSans;
       line-height: 2;
+      @include media("<tablet") {
+        display: none;
+      }
+    }
+    hr {
+      display: none;
+      @include media("<tablet") {
+        margin: 1rem 0;
+        width: 100px;
+        // border-top: 1px;
+        border-bottom: 1px;
+        display: block;
+      }
     }
     ul {
       // margin: 0 0 0 2rem;
@@ -83,15 +106,8 @@
         // flex-direction: row;
         // width: 100%;
       }
-      h5 {
-        // font-size: 0.8em;
-        // margin-bottom: 5px;
-        @include media("<desktop") {
-          // margin: 0 1em 0 0;
-        }
-      }
       li {
-        display: inline;
+        // display: inline;
         // margin: 0 0.5rem;
         padding: 5px 10px;
         color: $NavyLt;
@@ -105,8 +121,25 @@
           // background-color: $Red;
           text-decoration: underline;
         }
-        @include media("<desktop") {
-          display: block;
+        @include media("<tablet") {
+          font-size: 1.25rem;
+        // display: block;
+        }
+        .social_icon {
+          :nth-child(n) {
+            margin: 0 0 0 0.5rem;
+            font-size: 1.5rem;
+            color: tomato;
+            transition: ease 0.25s;
+            @include media("<tablet") {
+              font-size: 2rem;
+              margin: 1.5rem 0;
+            }
+            &:hover {
+              color: turquoise;
+              transform: translateX(-1px) translateY(-1px);
+            }
+          }
         }
       }
     }
@@ -151,10 +184,3 @@
   // }
 }
 
-
-.mobile_nav {
-  display: none;
-  @include media("<desktop") {
-    display: block;
-  }
-}

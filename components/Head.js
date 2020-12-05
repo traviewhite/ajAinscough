@@ -5,12 +5,12 @@ export default () => (
     <meta charSet="UTF-8" />
     <link hrefLang="en-US" lang="en-US"/>
     
-    <meta name="Description" content="Hi, I’m AJ!" />
-    <meta name="keywords" content="Travis White, traviswhite, traviewhite, travis, travie, white, web development, front end, react, developer, graphic design, illustration, printmaking, printmaker, photography, art, design, freelancer" />
-    <meta name="author" content="Travis White" />
-    <meta property="og:type" content="Travis White's Portfolio" />
-    <meta property="og:title" content="Travis White" />
-    <meta property="og:url" content="http://traviewhite.com" />
+    <meta name="Description" content="Hi, I’m Aj!" />
+    <meta name="keywords" content="Aj, Ainscough, Aj Ainscough Studio, ajainscough, ajainscoughstudio, Antonio, Fine Artist, Illustration, Illustrator, Artist, Painter, art, design, gallery" />
+    <meta name="author" content="Aj Ainscough" />
+    <meta property="og:type" content="Aj Ainscough's Studio" />
+    <meta property="og:title" content="Aj Ainscough" />
+    <meta property="og:url" content="http://ajainscough.studio" />
     <meta property="og:image" content="" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -21,7 +21,6 @@ export default () => (
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
 
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <link rel="manifest" href="../favicon/site.webmanifest" />
