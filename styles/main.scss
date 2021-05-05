@@ -92,8 +92,46 @@ $fontStackAnton: 'Anton', sans-serif;
     .index-intro {
       width: 100%;
       margin: 2rem 0 10%;
-      img {
-        width: 100%;
+      .index-intro-featured {
+        position: relative;
+        .featured-text {
+          position: absolute;
+          right: -12px;
+          top: 0;
+          background-color: #40224d;
+          border: 5px solid #8b479c;
+          transform: rotate(5deg);
+          p {
+            padding: 2rem;
+            line-height: 0;
+            font-size: 3vw;
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            text-align: center;
+            // color: rgb(140, 255, 221);
+            // background-color: rgb(69, 134, 59);
+
+            background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow_animation 5s ease-in-out infinite;
+            background-size: 400% 100%;
+            @keyframes rainbow_animation {
+              0%,
+              100% {
+                background-position: 0 0;
+              }
+
+              50% {
+                background-position: 100% 0;
+              }
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
       }
       .index-intro-info {
         margin: 3% 0;

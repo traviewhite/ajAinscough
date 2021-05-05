@@ -4,7 +4,6 @@ import GalleryGrid from 'components/GalleryGrid'
 import { client } from 'utils/contentfulPosts'
 
 export default function Home({ post }: any) {
-  console.log(post[3])
   return (
     <>
       <Head>
@@ -40,7 +39,12 @@ export default function Home({ post }: any) {
           </h4>
         </div>
         <section className='index-intro'>
-          <img src={post[3].fields.image.fields.file.url} alt={post[3].fields.title} />
+          <div className='index-intro-featured'>
+            <div className='featured-text'>
+              <p>$FEATURED$</p>
+            </div>
+            <img src={post[3].fields.image.fields.file.url} alt={post[3].fields.title} />
+          </div>
           <div className='index-intro-info'>
             <div className='index-intro-heading'>
               <h3>{post[3].fields.title}</h3>
@@ -51,6 +55,9 @@ export default function Home({ post }: any) {
             <button>BUY</button>
           </div>
         </section>
+        <h2 style={{ textAlign: 'center', marginBottom: '0.5rem' }}>‼️MORE‼️</h2>
+        <h2 style={{ textAlign: 'center', marginLeft: '1rem', marginBottom: '2rem' }}>👇</h2>
+
         <GalleryGrid post={post} />
       </main>
     </>
