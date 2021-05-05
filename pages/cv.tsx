@@ -3,16 +3,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 export default function CV() {
-
   return (
     <Layout>
       <Head>
         <title>CV / </title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>
-        HELLO CV
-      </main>
+      <main>HELLO CV</main>
     </Layout>
   )
 }
